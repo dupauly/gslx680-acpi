@@ -64,6 +64,14 @@ Running dmesg should produce some output if the device was matched
 by the driver. You should also see a message from the input
 subsystem that a new input device was added.
 
+**Notes added from user**: After preparing the firmware it may be necessary
+to enter the following command in terminal:
+        xinput --map-to-output <deviceid> <screenname>
+Change deviceid by the respective number of the device shown with 
+"xinput list" command. Change screename with the name shown
+as primary screen as output of "xrandr" command.
+**end of not** 
+
 You may then observe the output from evtest. X.org touchscreen input
 should work too, but you will notice that the touch points are
 off if the panel width and height were not set accurately.
